@@ -7,10 +7,19 @@
         <title>Etch-A-Sketch</title>
         <link  rel="stylesheet" href="styles.css">
     </head>
+
     <body>
         <div class="flex-container">
             <div class="title"><h1>Etch-A-Sketch</h1></div>
-            <div class="mode">Mode: Coloring</div>
+            <div class="mode">Click Screen to Switch Mode: Coloring</div>
+            <div>
+                <input 
+                type="text"
+                placeholder="2 - 100" 
+                onchange="changeSize(this.value)"
+                />
+                <button>Set Size</button>
+            </div>
             <div class="content">
                 <div class="board"></div>
                 <div class="buttons">
@@ -20,14 +29,6 @@
                     <button class="whiteButton" onclick="changeColor('white')">Erase</button>
                     <button class="resetButton" onclick="resetBoard()">Reset</button>
                 </div>
-            </div>
-            <div>
-                <input 
-                type="text"
-                placeholder="2 - 100" 
-                onchange="changeSize(this.value)"
-                />
-                <button>Set Size</button>
             </div>
         </div>
     </body>
